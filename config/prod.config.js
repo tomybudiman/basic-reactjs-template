@@ -13,6 +13,18 @@ const config=merge(baseconfig,{
           fallback:'style-loader',
           use:['css-loader','sass-loader']
         })
+      },
+      {
+        test:/\.(jpg|jpeg|png|gif)$/,
+        use:[
+          {
+            loader:'file-loader',
+            options:{
+              name:'[md5:hash].[ext]',
+              outputPath:'../media/'
+            }
+          }
+        ]
       }
     ]
   },
