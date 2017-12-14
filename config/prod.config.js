@@ -15,7 +15,7 @@ const config=merge(baseconfig,{
         })
       },
       {
-        test:/\.(jpg|jpeg|png|gif)$/,
+        test:/\.(jpg|jpeg|png|bmp|gif)$/,
         use:[
           {
             loader:'file-loader',
